@@ -2,6 +2,7 @@ package it.prova.gestionemunicipiospringdatamaven.service.utente;
 
 import java.util.List;
 
+import it.prova.gestionemunicipiospringdatamaven.model.StatoUtente;
 import it.prova.gestionemunicipiospringdatamaven.model.Utente;
 
 public interface UtenteService {
@@ -17,6 +18,8 @@ public interface UtenteService {
 	public void rimuovi(Utente utenteInstance);
 
 	public List<Utente> findByExample(Utente example);
+	
+	public Utente cercaPerUsernamePasswordEStato(String username, String password, StatoUtente stato);
 	
 	public Utente eseguiAccesso(String username, String password);
 

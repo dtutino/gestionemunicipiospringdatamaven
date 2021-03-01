@@ -47,6 +47,10 @@ public class UtenteServiceImpl implements UtenteService {
 		// TODO Auto-generated method stub
 		return null;
 	}
+	
+	public Utente cercaPerUsernamePasswordEStato(String username, String password, StatoUtente stato) {
+		return (Utente) repository.findByUsernameAndPasswordAndStato(username, password, stato);
+	}
 
 	@Transactional(readOnly = true)
 	public Utente eseguiAccesso(String username, String password) {
