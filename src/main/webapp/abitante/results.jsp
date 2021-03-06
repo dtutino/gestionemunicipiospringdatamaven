@@ -26,6 +26,7 @@
 					<th>Cognome</th>
 					<th>Eta</th>
 					<th>Residenza</th>
+					<th>Munincipio</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -36,6 +37,7 @@
 						<td>${abitanteItem.cognome }</td>
 						<td>${abitanteItem.eta }</td>
 						<td>${abitanteItem.residenza }</td>
+						<td>${abitanteItem.municipio.descrizione }</td>
 						<td><a
 							href="ExecuteDettaglioAbitanteServlet?idMunicipio=${abitanteItem.id }"
 							class="btn btn-info">Dettaglio</a> <a
