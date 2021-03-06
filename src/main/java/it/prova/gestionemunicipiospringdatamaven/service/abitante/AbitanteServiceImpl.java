@@ -64,7 +64,7 @@ public class AbitanteServiceImpl implements AbitanteService {
 	//nel caso si volesse fare una query particolare nel service...
 	@Override
 	public List<Abitante> findByExample2(Abitante example) {
-		String query = "select a from Abitante a where a.id = a.id ";
+		String query = "select a from Abitante a left join fetch a.municipio where a.id = a.id ";
 
 		if (StringUtils.isNotEmpty(example.getNome()))
 			query += " and a.nome like '%" + example.getNome() + "%' ";
