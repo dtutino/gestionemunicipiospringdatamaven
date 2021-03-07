@@ -37,6 +37,12 @@ public class AbitanteServiceImpl implements AbitanteService {
 		return abitanteRepository.findById(id).orElse(null);
 
 	}
+	
+	@Transactional(readOnly = true)
+	public Abitante caricaSingoloAbitanteEager(Long id) {
+		return entityManager.createQuery("select a from Abitante a left join fetch a.municipio where a.id =:idAbitante", Abitante.class)
+				.setParameter("idAbitante", id).getSingleResult();
+	}
 
 	@Transactional
 	public void aggiorna(Abitante abitanteInstance) {

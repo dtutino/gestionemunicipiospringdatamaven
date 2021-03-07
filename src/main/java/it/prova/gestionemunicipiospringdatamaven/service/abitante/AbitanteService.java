@@ -9,6 +9,8 @@ public interface AbitanteService {
 	public List<Abitante> listAllAbitanti();
 
 	public Abitante caricaSingoloAbitante(Long id);
+	
+	public Abitante caricaSingoloAbitanteEager(Long id);
 
 	public void aggiorna(Abitante abitanteInstance);
 
