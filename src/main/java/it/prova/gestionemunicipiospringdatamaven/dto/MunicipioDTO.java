@@ -23,6 +23,13 @@ public class MunicipioDTO {
 		this.codice = codice;
 		this.ubicazione = ubicazione;
 	}
+	
+	public MunicipioDTO(Long id, String descrizione, String codice, String ubicazione) {
+		this.id = id;
+		this.descrizione = descrizione;
+		this.codice = codice;
+		this.ubicazione = ubicazione;
+	}
 
 	public Long getId() {
 		return id;
