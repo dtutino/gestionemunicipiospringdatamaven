@@ -39,10 +39,12 @@
 						<td>${abitanteItem.residenza }</td>
 						<td>${abitanteItem.municipio.descrizione }</td>
 						<td><a
-							href="ExecuteDettaglioAbitanteServlet?idMunicipio=${abitanteItem.id }"
+							href="ExecuteDettaglioAbitanteServlet?idAbitante=${abitanteItem.id }"
 							class="btn btn-info">Dettaglio</a> <a
-							href="PrepareModificaAbitanteServlet?idMunicipio=${abitanteItem.id }"
-							class="btn btn-info">Modifica</a></td>
+							href="PrepareModificaAbitanteServlet?idAbitante=${abitanteItem.id }"
+							class="btn btn-info">Modifica</a> <a
+							href="PrepareEliminaAbitanteServlet?idAbitante=${abitanteItem.id }"
+							class="btn btn-info">Elimina</a></td>
 					</tr>
 				</c:forEach>
 
